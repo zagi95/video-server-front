@@ -1,0 +1,10 @@
+<div *ngIf="video">
+
+  <h2>{{video.name | uppercase}} Details</h2>
+  <div>
+    <label for="hero-name">Video name: </label>
+    <input id="hero-name" [(ngModel)]="video.name" placeholder="name">
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+
+</div>

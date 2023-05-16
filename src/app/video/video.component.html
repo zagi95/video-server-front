@@ -1,0 +1,19 @@
+<h2>My Videos</h2>
+
+<ul class="heroes">
+  <li *ngFor="let video of videos">
+    <a routerLink="/detail/{{video.path}}">
+      <span class="badge">{{video.name}}</span> {{video.name}}
+    </a>
+  </li>
+</ul>
+
+<div>
+  <label for="new-hero">Video: </label>
+  <input type="file" id="new-hero" #Video />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(Video.value); Video.value=''">
+    Add video
+  </button>
+</div>
